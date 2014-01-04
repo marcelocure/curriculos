@@ -29,11 +29,11 @@ public class Searcher {
 		 TopDocs results = searcher.search(query, 10);
 		 ScoreDoc[] hits = results.scoreDocs;
 			
-			for(ScoreDoc hit : hits) {
-				Document doc = searcher.doc(hit.doc);
-				System.out.println(doc.get("url"));
-				System.out.println(doc.get("content"));
-			}
+		for(ScoreDoc hit : hits) {
+			Document doc = searcher.doc(hit.doc);
+			System.out.println(doc.get("url"));
+			System.out.println(doc.get("content"));
+		}
 
 
 //		IndexSearcher searcher = new IndexSearcher(IndexReader.open(FSDirectory.open(new File("C:/luceneindexes"))));
