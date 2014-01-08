@@ -32,7 +32,6 @@ public class Searcher {
 		for(ScoreDoc hit : hits) {
 			Document doc = searcher.doc(hit.doc);
 			System.out.println(doc.get("url"));
-			System.out.println(doc.get("content"));
 		}
 
 
