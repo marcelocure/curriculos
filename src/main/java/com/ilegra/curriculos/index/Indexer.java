@@ -22,7 +22,7 @@ import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import com.ilegra.curriculos.domain.LuceneDocument;
-import com.ilegra.curriculos.service.management.DocumentsProvider;
+import com.ilegra.curriculos.service.provider.DocumentsProvider;
 
 public class Indexer {
 	
