@@ -80,10 +80,10 @@
 	</dependencies>
 
 	<repositories>
-		<repository>
-			<id>google-api-services</id>
-			<url>https://oss.sonatype.org/content/repositories/releases/</url>
-		</repository>
+		<!-- <repository> -->
+		<!-- <id>google-api-services</id> -->
+		<!-- <url>https://oss.sonatype.org/content/repositories/releases/</url> -->
+		<!-- </repository> -->
 
 		<repository>
 			<id>google-releases</id>
@@ -96,4 +96,24 @@
 			<url>http://google-api-client-libraries.appspot.com/mavenrepo</url>
 		</repository>
 	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.ilegra.curriculos.index.ExecIndexer</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
